@@ -111,18 +111,23 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        for (HashMap jobs : someJobs){
+        if (someJobs.size() == 0) {
+            System.out.println("No jobs found");
+        } else {
+            for (HashMap jobs : someJobs){
 
-            System.out.println("*****");
-            String job = jobs.toString();
-            String jobDetail[] = job.split(",");
+                System.out.println("*****");
+                String job = jobs.toString();
+                String jobDetail[] = job.split(",");
 
-            for (String jobd : jobDetail){
-              System.out.println(jobd);
+                for (String jobd : jobDetail){
+                    System.out.println(jobd);
 
+                }
             }
+            System.out.println("*****");
+
         }
-        System.out.println("*****");
 
     }
 }
