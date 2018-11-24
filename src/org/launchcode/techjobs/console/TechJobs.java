@@ -19,6 +19,7 @@ public class TechJobs {
         columnChoices.put("employer", "Employer");
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
+//      columnChoices.put("value", "Value");
         columnChoices.put("all", "All");
 
         // Top-level menu options
@@ -61,7 +62,8 @@ public class TechJobs {
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
-                    System.out.println("Search all fields not yet implemented.");
+//                  System.out.println("Search all fields not yet implemented.");
+                    printJobs(JobData.findByValue(searchField, searchTerm));
                 } else {
                     printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
                 }
