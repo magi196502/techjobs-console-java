@@ -104,6 +104,7 @@ public class JobData {
 
                 if (eLowerValue.contains(valueLower) && !jobs.contains(row)) {
                     jobs.add(row);
+                    break;
                 }
 
 
