@@ -120,6 +120,8 @@ public class TechJobs {
 
                 System.out.println("*****");
                 String job = jobs.toString();
+                job = job.replace("{","");
+                job = job.replace("}","");
                 String jobDetail[] = job.split(",");
 
                 for (String jobd : jobDetail){
